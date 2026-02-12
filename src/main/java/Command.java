@@ -1,10 +1,10 @@
-package TopSecret;
 public class Command {
     public enum Type {
         list_files,
         show_file,
         error
     }
+
     private Type type;
     private String fileNumber;
     private String key;
@@ -31,18 +31,19 @@ public class Command {
         return c;
     }
 
-    public Type getType() { return type; }
-    public String getFileNumber() { return fileNumber; }
-    public String getKey() { return key; }
-    public String getErrorMessage() { return errorMessage; }
+    public Type getType() {
+        return type;
+    }
+
+    public String getFileNumber() {
+        return fileNumber;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
 }
-
-
-
-
-
-
-
-
-
-

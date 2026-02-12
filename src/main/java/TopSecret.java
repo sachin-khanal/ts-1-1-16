@@ -1,18 +1,14 @@
-import java.io.InputStream;
-import java.util.Scanner;
+/**
+ * Command Line Utility
+ */
 
-public class topsecret {
-    static String[] files = {"filea.txt", "fileb.txt", "filec.txt"};
-    static int defaultCipher = 3;
-    public static void main(String[] args){
-        if (args.length == 0){
-            for (int i = 0; i<files.length; i++) {
-                int number = i + 1;
-
-            } else if (args.length == 2){
-                int cipher = Integer.parseInt(args[1]);
-                showFile(args[0], cipher);
-            }
+public class TopSecret {
+    public static void main(String[] args) {
+        Command command = parseArguments(args);
+        switch (command.getType()) {
+            case list_files:
+                System.out.println("Listing files...");
+                break;
             case show_file:
                 showFile(command.getFileNumber(), command.getKey());
                 break;
@@ -22,8 +18,8 @@ public class topsecret {
         }
     }
 
-    public static Command parseArguments(String[] args){
-        if (args.length == 0){
+    public static Command parseArguments(String[] args) {
+        if (args.length == 0) {
             return Command.list();
         }
         if (args.length > 2) {
@@ -31,11 +27,11 @@ public class topsecret {
         }
         String fileNumber = args[0];
 
-        if (!fileNumber.matches("\\d{2}")){
+        if (!fileNumber.matches("\\d{2}")) {
             return Command.error("invalid file number");
         }
         String key = "default";
-        if (args.length ==2){
+        if (args.length == 2) {
             key = args[1];
         }
         return Command.show(fileNumber, key);
