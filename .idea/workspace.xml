@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c96c2614-57ab-44c1-82df-5c75ca329a31" name="Changes" comment="command line interface" />
+    <list default="true" id="c96c2614-57ab-44c1-82df-5c75ca329a31" name="Changes" comment="added:&#10;- cipher utility class, tests, docs&#10;- test data (data/)">
+      <change afterPath="$PROJECT_DIR$/data/carnivore.cip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/carnivore.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cointelpro.cip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/cointelpro.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/CIPHER.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/Cipher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/CipherInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/InvalidCipherKeyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/CipherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ciphers/key.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ciphers/key.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cipher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CipherTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +69,7 @@
     <urls />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -66,7 +82,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.CipherTest (1).executor": "Run",
     "Gradle.CipherTest.executor": "Run",
+    "Gradle.CipherTest.testCipherKeyMissingFile.executor": "Run",
     "Gradle.CipherUtilityTest.executor": "Run",
     "Gradle.ts-1-1-16 [:CipherUtility.main()].executor": "Run",
     "Gradle.ts-1-1-16 [:TopSecret.main()].executor": "Run",
@@ -102,20 +120,40 @@
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CipherTest">
-    <configuration name="Cipher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Cipher" />
-      <module name="TopSecret.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.CipherTest (1)">
     <configuration name="TopSecret" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TopSecret" />
       <module name="TopSecret.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="CipherTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;utilities.CipherTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
     </configuration>
     <configuration name="CipherTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -131,6 +169,33 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;CipherTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CipherTest.testCipherKeyMissingFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;utilities.CipherTest.testCipherKeyMissingFile&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -173,6 +238,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CipherTest (1)" />
+        <item itemvalue="Gradle.CipherTest.testCipherKeyMissingFile" />
         <item itemvalue="Gradle.CipherTest" />
         <item itemvalue="Gradle.CipherUtilityTest" />
         <item itemvalue="Application.TopSecret" />
@@ -197,7 +264,7 @@
       <workItem from="1770312840278" duration="2108000" />
       <workItem from="1770314957508" duration="12000" />
       <workItem from="1770315137775" duration="670000" />
-      <workItem from="1770316336762" duration="13000" />
+      <workItem from="1770498462666" duration="1956000" />
     </task>
     <task id="LOCAL-00001" summary="added markdown boiler">
       <option name="closed" value="true" />
@@ -253,24 +320,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added markdown boiler" />
     <MESSAGE value="boiler for cipher-utility class and added .idea folder to gitignore" />
     <MESSAGE value="added more boiler for tests" />
-    <MESSAGE value="interface for how to use user interface" />
-    <MESSAGE value="command line interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="command line interface" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/TopSecret.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="added:&#10;- cipher utility class, tests, docs&#10;- test data (data/)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added:&#10;- cipher utility class, tests, docs&#10;- test data (data/)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
