@@ -1,0 +1,21 @@
+Documentation for Cipher utility class.
+
+The standalone Cipher utility class provides methods for encrypting and decrypting text.
+This is not a static class, and therefore you will need to create an instance of the Cipher class to use its methods.
+You can either use the default key by just instantiating Cipher() or you can specify your own key by using Cipher(String cipherKeyFilePath).
+The key file should contain the key used for encryption and decryption and must pass all validation checks.
+
+The specified methods are:
+    encrypt(String plaintext): This method will take a string in plaintext and return an encrypted version of it.
+    decrypt(String ciphertext): This method will take an encrypted string and return the original plaintext.
+
+Errors will show up if there's any issue with reading the key file or if the keys in the file are invalid. In such cases, unchecked runtime exceptions will be thrown:
+    InvalidCipherKeyException: This exception is thrown when the key file is invalid.
+        The key file is empty.
+        The key file does not have exactly 2 lines.
+        The key file does not have an equal # of characters for both keys.
+        The key file contains duplicate characters in either key.
+    InvalidCipherKeyFileException: This exception is thrown if there is an issue with reading the key file.
+
+Testing:
+    A comprehensive set of unit tests are implemented in src/test/java/utilities/CipherTest.java to address the issues above and to test the functionality of the Cipher class.

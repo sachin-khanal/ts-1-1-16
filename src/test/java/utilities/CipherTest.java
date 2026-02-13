@@ -29,8 +29,6 @@ public class CipherTest {
         Files.deleteIfExists(path);
     }
 
-
-
     @AfterEach
     void deleteTestKeys() throws IOException {
         deleteIfExists("valid_key.txt");
