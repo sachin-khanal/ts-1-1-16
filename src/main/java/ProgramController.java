@@ -30,6 +30,7 @@ public class ProgramController {
             return "Error: out of range";
         }
         String selectedFile = availableFiles.get(index);
-        return fileHandler.readFile(selectedFile);
+        String keyFilePath = (args.length >= 2) ? args[1] : null;
+        return fileHandler.readFile(selectedFile, keyFilePath);
     }
 }
