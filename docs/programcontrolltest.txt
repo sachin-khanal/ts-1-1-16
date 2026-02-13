@@ -1,0 +1,17 @@
+The purpose of testing the ProgramController class is to check if it correctly combines the usage of the
+command line along with the file handler. I used Mockito to mock the file handler so that the program
+controller could be tested, which makes sure that the tests are based on logic and not just the files.
+
+The first method i tested was the run method which uses logic based on the user's input and it has to test
+that it does the correct thing. When 0 arguments are provided the controller should get the list of files
+from the file handler and return them in a number format. The test makes sure that the returned string has
+the correct format.
+
+When a number argument is provided, the controller should convert the input into an index and select that
+file at that index and call readFile() on it.
+
+If a non-numeric argument is provided, the controller should return a number format exception and
+provide a message saying error.
+
+If a number argument outside of range is called the controller should return a out of range exception and
+provide an error saying that.
