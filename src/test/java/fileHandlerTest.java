@@ -19,7 +19,7 @@ public class FileHandlerTest {
         FileHandler filehandler = new FileHandler();
 
         try {
-            filehandler.readFile("test.txt");
+            filehandler.readFile("test.txt", null);
             fail("if the test passes, the readFile error handling doesnt work");
         } catch (RuntimeException e) {
             assertTrue(true);
@@ -30,7 +30,7 @@ public class FileHandlerTest {
     @Test
     void readFileTest() {
         FileHandler filehandler = new FileHandler();
-        String realFile = filehandler.readFile("carnivore.txt");
+        String realFile = filehandler.readFile("carnivore.txt", null);
         // store real file to be tested
 
         assertNotNull(realFile);// check to see if file is null
@@ -42,8 +42,8 @@ public class FileHandlerTest {
     @Test
     void checkForCIP() {
         FileHandler filehandler = new FileHandler();
-        String testedFile = filehandler.readFile("carnivore.txt");
-        String encryptedFile = filehandler.readFile("carnivore.cip");
+        String testedFile = filehandler.readFile("carnivore.txt", null);
+        String encryptedFile = filehandler.readFile("carnivore.cip", null);
         assertNotNull(encryptedFile);
         assertEquals(testedFile.trim(), encryptedFile.trim());
     }// check to see if the encrypted file is decryped after read.readFile is called.
