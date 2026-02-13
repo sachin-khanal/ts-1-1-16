@@ -5,6 +5,7 @@ import java.nio.file.Path;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
+import utilities.Cipher;
 
 public class FileHandler {
 
@@ -75,6 +76,18 @@ public class FileHandler {
             System.out.println("error reading the file" + e.getMessage());
         }
         //use try-catch block to catch any errors while reading file so code doesn't just crash
+
+        if(fileName.toLowerCase().endsWith(".cip")){
+            try{
+                Cipher cipher = new Cipher();
+                fileContents = cipher.decrypt(fileContents);
+                //set the string to decrypted contents
+            }
+            catch (RuntimeException e){
+                System.out.println("error decrypting file" + e.getMessage());
+            }
+        }//if the file ends with cip, decrypt it first.
+
 
         return fileContents;
         //return file as a string

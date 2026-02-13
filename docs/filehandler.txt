@@ -1,1 +1,12 @@
 documentation for handling direct access to files.
+
+
+The file handler should get the files in the data folder for the command line to access and list the files.
+they can be stored in a list and a method should return the list.
+There should be error handling so the code doesnt crash if a file is not found/empty or a path is wrong.
+use try-catch blocks to catch any errors that might come from getting the files.
+
+Another method should read each line from a file and add it to a string.
+use try-catch blocks to catch any errors while accessing the file.
+use a loop to loop through each line and add it to a string.
+
