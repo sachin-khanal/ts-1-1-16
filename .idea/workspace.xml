@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11d74008-8339-4675-89e0-143d7228c8cb" name="Changes" comment="finished">
+    <list default="true" id="11d74008-8339-4675-89e0-143d7228c8cb" name="Changes" comment="fixed some stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TopSecret.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopSecret.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TopSecretTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TopSecretTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProgramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProgramController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProgramControllerTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,15 +19,7 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -113,13 +104,13 @@
       <option name="project" value="LOCAL" />
       <updated>1770949409698</updated>
     </task>
-    <task id="LOCAL-00003" summary="finished">
+    <task id="LOCAL-00003" summary="fixed some stuff">
       <option name="closed" value="true" />
-      <created>1770949573953</created>
+      <created>1770949817762</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1770949573953</updated>
+      <updated>1770949817762</updated>
     </task>
     <task id="LOCAL-00004" summary="finished">
       <option name="closed" value="true" />
@@ -163,6 +154,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished" />
+    <MESSAGE value="fixed some stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some stuff" />
   </component>
 </project>
